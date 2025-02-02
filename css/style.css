@@ -3,48 +3,64 @@ Remember the cascade:
  1. later styles override earlier ones 
  2. more specific styles override more general ones
 --*/
+
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 img {
-	width: 100%;
-	height: auto;
+  width: 110%;
+  height: auto;
+}
+.dropcap span {
+  color: #490c6a ;
 }
 body {
-  color: #444;
+  background-color: #ffffff;
+  color: #000000;
   font-size: 1.6rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Gentium Book Plus", serif;
 }
 p {
-  margin-bottom: .67em;
+  margin: 0;
 }
-nav, footer {
-  background-color: #444;
+nav, 
+footer {
+  background-color: #490c6a;
 }
 footer {
   text-align: center;
-  padding: 1em 0 .3em 0;
-  color: #D0D0D0;
+  padding: 1em 0;
+  color: #ffffff;
+}
+footer p {
+  margin: 0;
 }
 /*-- Main Menu Styles--*/
 nav ul {
   list-style: none;
   padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
 }
-nav a:link, nav a:visited {
-  color: #D0D0D0;
+nav a:link,
+nav a:visited {
+  color: #ffffff;
   text-decoration: none;
 }
-nav a:hover, nav a:active  {
-  color: #F0F0F0;
+nav a:hover,
+nav a:active {
+  color: #ffffff;
   text-decoration: underline;
 }
 nav a.active {
-  color: #F0F0F0;
+  color: #f0f0f0;
 }
 /*-- Hero Unit Styles--*/
 header {
   width: 510px;
+  margin: 0 auto;
+  text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -56,44 +72,101 @@ header h1 {
   margin: 0 auto;
   padding: 0 auto;
 }
+header .small {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: #490c6a;
+}
 .small {
   margin-top: 1em;
 }
 /*-- Article Styles--*/
 article {
   width: 768px;
+  margin: 0 auto;
   font-size: 18px;
   line-height: 1.3;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+.dropcap {
+  display: inline-flex;
+  align-items: start;
+}
+.dropcap span {
+  font-size: 48px;
+  line-height: 36px;
+  margin-right: 4px;
+}
+article .figure-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+article .figure-container .figure-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 article figure {
-  width: 39%;
+  width: 100%;
+  max-width: 300px;
   margin: 0 0 1.25em 1.25em;
 }
 article figcaption {
-  font-size: inherit;
+  font-weight: 100;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #000000;
 }
 .pagination {
   margin-top: 2em;
   margin-bottom: 2em;
   width: 96%;
+  display: flex;
+  justify-content: space-around;
 }
 a.button {
-  border: 2px solid #888;
-  padding: .4em 1em .4em 1em;
+  border: 2px solid #490c6a;
+  padding: 0.4em 1em 0.4em 1em;
   text-decoration: none;
-  color: #888;
+  color: #490c6a;
   border-radius: 200px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 80%;
 }
-a.button:hover, a.button:active {
+a.button:hover,
+a.button:active {
   border: 1px solid #444;
   text-decoration: none;
   color: #222;
 }
 /*-- changes header and article width on small screens --*/
 @media screen and (max-width: 768px) {
-  header {width: 96%;}
-  article {width: 96%;}
+  header {
+    width: 96%;
+  }
+  article {
+    width: 96%;
+  }
+}
+body {
+  background: linear-gradient(to right, #ffffff, #d7cee6);
+  color: #000000;
+  font-size: 1.6rem;
+  font-family: "Gentium Book Plus", serif;
+}
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
