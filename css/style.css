@@ -8,14 +8,33 @@ html {
   font-size: 62.5%;
 }
 img {
-  width: 110%;
+  width: 100%;
   height: auto;
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
-.dropcap span {
-  color: #490c6a ;
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
-body {
+.dropcap::first-letter {
+  font-size: 48px;
+  color: #490c6a;
+  float: left;
+  line-height: 1;
+  padding-top: 0.1em;
+  padding-right: 0.1em;
+  padding-left: 0;
+}
+/* body {
   background-color: #ffffff;
+  color: #000000;
+  font-size: 1.6rem;
+  font-family: "Gentium Book Plus", serif;
+} */
+body {
+  background: linear-gradient(to right, #ffffff, #d7cee6);
   color: #000000;
   font-size: 1.6rem;
   font-family: "Gentium Book Plus", serif;
@@ -23,7 +42,7 @@ body {
 p {
   margin: 0;
 }
-nav, 
+nav,
 footer {
   background-color: #490c6a;
 }
@@ -93,18 +112,10 @@ article {
   flex-direction: column;
   gap: 1rem;
 }
-.dropcap {
-  display: inline-flex;
-  align-items: start;
-}
-.dropcap span {
-  font-size: 48px;
-  line-height: 36px;
-  margin-right: 4px;
-}
 article .figure-container {
   display: flex;
   flex-direction: row-reverse;
+  gap: 1rem;
 }
 article .figure-container .figure-left {
   width: 100%;
@@ -114,9 +125,10 @@ article .figure-container .figure-left {
 }
 
 article figure {
+  float: right;
   width: 100%;
-  max-width: 300px;
-  margin: 0 0 1.25em 1.25em;
+  max-width: 250px;
+  margin: 0;
 }
 article figcaption {
   font-weight: 100;
@@ -132,20 +144,28 @@ article figcaption {
   justify-content: space-around;
 }
 a.button {
-  border: 2px solid #490c6a;
+  border: 1px solid #490c6a;
   padding: 0.4em 1em 0.4em 1em;
   text-decoration: none;
   color: #490c6a;
-  border-radius: 200px;
+  background-color: transparent;
+  border-radius: 100px;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 80%;
+  transition: all 0.3s ease;
 }
 a.button:hover,
 a.button:active {
-  border: 1px solid #444;
+  border: 1px solid #490c6a;
+  padding: 0.4em 1em 0.4em 1em;
   text-decoration: none;
-  color: #222;
+  color: white;
+  background-color: #490c6a;
+  border-radius: 100px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 80%;
 }
 /*-- changes header and article width on small screens --*/
 @media screen and (max-width: 768px) {
@@ -155,18 +175,4 @@ a.button:active {
   article {
     width: 96%;
   }
-}
-body {
-  background: linear-gradient(to right, #ffffff, #d7cee6);
-  color: #000000;
-  font-size: 1.6rem;
-  font-family: "Gentium Book Plus", serif;
-}
-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
 }
