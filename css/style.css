@@ -144,7 +144,7 @@ article figcaption {
   justify-content: space-around;
 }
 a.button {
-  border: 1px solid #490c6a;
+  border: 2px solid #490c6a;
   padding: 0.4em 1em 0.4em 1em;
   text-decoration: none;
   color: #490c6a;
@@ -157,7 +157,7 @@ a.button {
 }
 a.button:hover,
 a.button:active {
-  border: 1px solid #490c6a;
+  border: 2px solid #490c6a;
   padding: 0.4em 1em 0.4em 1em;
   text-decoration: none;
   color: white;
